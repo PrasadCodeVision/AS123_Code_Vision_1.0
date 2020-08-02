@@ -6,38 +6,31 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 
+
 public class RectOverlay extends GraphicOverlay.Graphic{
     private int mRectcolor = Color.GREEN;
-    private  float mStrokeWidth = 4.0f;
+    private float mStrokeWidth = 4.0f;
     private Paint mRectPaint;
     private GraphicOverlay graphicOverlay;
     private Rect rect;
 
+    public RectOverlay(GraphicOverlay overlay) {
 
-    public RectOverlay(GraphicOverlay graphicOverlay, Rect rect) {
         super(overlay);
 
-        mRectPaint = new Paint();
+        mRectPaint=new Paint();
         mRectPaint.setColor(mRectcolor);
         mRectPaint.setStyle(Paint.Style.STROKE);
         mRectPaint.setStrokeWidth(mStrokeWidth);
 
         this.graphicOverlay = graphicOverlay;
-        this.rect=rect;
+        this.rect = rect;
         postInvalidate();
-
     }
-
 
     @Override
     public void draw(Canvas canvas) {
-        RectF rectF = new RectF(rect);
-        rectF.left = translateX(rectF.left);
-        rectF.right=translateX(rectF.left);
-        rectF.top=translateX(rectF.top);
-        rectF.bottom=translateX(rectF.bottom);
-
-        canvas.drawRect(rectF, mRectPaint);
+        RectF rectF =new
 
     }
 }

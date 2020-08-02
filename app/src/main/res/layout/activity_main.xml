@@ -10,14 +10,27 @@
         android:id="@+id/camera_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/detect_face_btn">
+        android:layout_above="@+id/detect_face_btn"
+        tools:ignore="MissingConstraints,UnknownId">
 
     </com.wonderkiln.camerakit.CameraView>
 
+    <com.example.facedetection.Helper.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/detect_face_btn"
+        tools:ignore="MissingConstraints" />
+
+
     <Button
-        android:layout_alignParentBottom=""
+        android:id="@+id/detect_face_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
         android:text="Detect Face"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
