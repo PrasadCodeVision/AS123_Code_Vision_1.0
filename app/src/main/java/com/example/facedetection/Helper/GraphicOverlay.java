@@ -29,6 +29,10 @@ public class GraphicOverlay extends View {
             mOverlay = overlay;
         }
 
+        public Graphic() {
+
+        }
+
 
         public abstract void draw(Canvas canvas);
 
